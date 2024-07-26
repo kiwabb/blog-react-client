@@ -1,0 +1,152 @@
+@import "@/assets/css/color";
+
+@white: white;
+@bannerWave1: url(@/assets/img/bannerwave1.png) repeat-x;
+@bannerWave2: url(@/assets/img/bannerwave2.png) repeat-x;
+@globalFont: ZhuZiAWan_light;
+.index-image {
+  animation: header-effect 2s;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.index-image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  content: '';
+}
+
+.signature-wall {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  user-select: none;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.playful {
+  color: @white;
+  font-size: 40px;
+}
+
+.bannerWave1{
+  height: 84px;
+  background: @bannerWave1;
+  position: absolute;
+  width: 200%;
+  bottom: 0;
+  z-index: 10;
+  animation: gradientBG 120s linear infinite;
+}
+
+.bannerWave2{
+  height: 100px;
+  background: @bannerWave2;
+  position: absolute;
+  width: 400%;
+  bottom: 0;
+  z-index: 5;
+  animation: gradientBG 120s linear infinite;
+}
+
+.el-icon-arrow-down {
+  font-size: 40px;
+  font-weight: bold;
+  color: @white;
+  position: absolute;
+  bottom: 60px;
+  -webkit-animation: my-shake 1.5s ease-out infinite;
+  animation: my-shake 1.5s ease-out infinite;
+  z-index: 15;
+  cursor: pointer;
+  font-family: @globalFont !important;
+}
+.page-container-wrap {
+  background: @background;
+  position: relative;
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding: 0 20px 40px 20px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.recent-posts {
+  width: 70%;
+}
+
+.aside-content {
+  width: calc(30% - 40px);
+  user-select: none;
+  margin-top: 40px;
+  margin-right: 40px;
+  max-width: 300px;
+  float: right;
+}
+
+.announcement {
+  padding: 22px;
+  border: 1px dashed @lightGray;
+  color: @greyFont;
+  border-radius: 10px;
+  display: flex;
+  margin: 40px auto 40px;
+}
+
+.announcement i {
+  color: @themeBackground;
+  font-size: 22px;
+  margin: auto 0;
+  animation: scale 0.8s ease-in-out infinite;
+}
+.announcement div div {
+  margin-left: 20px;
+  line-height: 30px;
+}
+.sort-svg {
+  vertical-align: -2px;
+  margin-bottom: -2px;
+}
+
+.sort-article-first {
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  color: @greyFont;
+  border-bottom: 1px dashed @lightGray;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .page-container {
+    /* 文章栏与侧标栏垂直排列 */
+    flex-direction: column;
+  }
+
+  .aside-content {
+    width: 100%;
+    max-width: unset;
+    float: unset;
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .recent-posts {
+    width: 100%;
+  }
+
+  .page-container {
+    width: 100%;
+  }
+}

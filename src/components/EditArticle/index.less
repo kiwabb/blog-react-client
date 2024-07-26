@@ -1,0 +1,49 @@
+@import "@/assets/css/color";
+
+
+.edit-content {
+  background: @background;
+  position: relative;
+  padding-top: 60px;
+}
+
+.edit-container {
+  display: flex;
+  justify-content: left;
+  width: 90%;
+  padding: 60px 20px 40px 20px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.markdown-editor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 将页面分为两列，每列宽度相等 */
+}
+
+.markdown-editor-write {
+  grid-column: 1; /* 写入视图显示在第一列 */
+}
+
+.markdown-editor-preview {
+  grid-column: 2; /* 预览视图显示在第二列 */
+}
+
+:where(.css-dev-only-do-not-override-1qhpsh8).ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item-container, :where(.css-dev-only-do-not-override-1qhpsh8).ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item-container, :where(.css-dev-only-do-not-override-1qhpsh8).ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload-list.ant-upload-list-picture-circle .ant-upload-list-item-container, :where(.css-dev-only-do-not-override-1qhpsh8).ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload-list.ant-upload-list-picture-circle .ant-upload-list-item-container {
+  width: 300px;
+  height: 200px;
+}
+
+.submitButton {
+  width: 150px;
+  background: @lightGreen;
+  color: @white;
+  margin-right: 20px;
+}
+
+.saveButton{
+  width: 150px;
+  background: @gradualRed;
+  color: @white;
+}
+

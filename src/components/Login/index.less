@@ -1,0 +1,153 @@
+@import "@/assets/css/color";
+
+
+.in-up-container {
+  height: 100vh;
+  position: relative;
+}
+
+.in-up {
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px @miniMask, 0 10px 10px @miniMask;
+  position: relative;
+  overflow: hidden;
+  width: 750px;
+  max-width: 100%;
+  min-height: 450px;
+  margin: 10px;
+}
+
+.in-up p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 20px 0 30px 0;
+}
+
+.in-up a {
+  color: @black;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.form-container {
+  position: absolute;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+}
+
+.form-container div {
+  background: @white;
+  flex-direction: column;
+  padding: 0 20px;
+  height: 100%;
+}
+
+
+.form-container input {
+  background: @maxLightGray;
+  border-radius: 2px;
+  border: none;
+  padding: 12px 15px;
+  margin: 10px 0;
+  width: 100%;
+  outline: none;
+}
+
+.in-up Button {
+  border-radius: 2rem;
+  border: none;
+  background: @lightRed;
+  color: @white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.in-up Button:hover {
+  animation: scale 0.8s ease-in-out;
+}
+
+.in-up Button.ghost {
+  background: transparent;
+  border: 1px solid @white;
+}
+
+.sign-up-container Button {
+  margin-top: 20px;
+}
+
+.overlay-container {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay {
+  background: @gradualRed;
+  color: @white;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateY(0);
+}
+
+.overlay-left {
+  transform: translateY(-20%);
+}
+
+.in-up.rightPanelActive .sign-in-container {
+  transform: translateY(100%);
+}
+
+.in-up.rightPanelActive .overlay-container {
+  transform: translateX(-100%);
+}
+
+.in-up.rightPanelActive .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+.in-up.rightPanelActive .overlay {
+  transform: translateX(50%);
+}
+
+.in-up.rightPanelActive .overlay-left {
+  transform: translateY(0);
+}
+
+.in-up.rightPanelActive .overlay-right {
+  transform: translateY(20%);
+}
